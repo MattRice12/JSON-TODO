@@ -8,10 +8,9 @@
 
 
 
-10.times do
-  Task.new(body: "Blah blah blah")
-end
-
 5.times do
-  List.new(title: "AasdfASasdf")
+  list = List.create(title: "AasdfASasdf")
+  10.times do
+    Task.create(body: "Blah blah blah", list_id: list.id)
+  end
 end

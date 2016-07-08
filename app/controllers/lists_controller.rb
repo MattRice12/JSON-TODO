@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   def index
+    render json: List.all.to_json, status: 200
   end
 
   def show

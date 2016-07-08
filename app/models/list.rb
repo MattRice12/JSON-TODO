@@ -1,3 +1,3 @@
 class List < ApplicationRecord
-  validates :title
+  validates :title, length: { minimum: 2, maximum: 80 }
 end
