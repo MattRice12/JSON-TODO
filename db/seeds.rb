@@ -9,8 +9,9 @@
 
 
 5.times do
-  list = List.create(title: "AasdfASasdf")
-  10.times do
-    Task.create(body: "Blah blah blah", list_id: list.id)
+  lists = List.create(title: Faker::Name.title)
+
+  2.times do
+    Task.create(body: Faker::Lorem.paragraph, list_id: lists.id, completed: rand(0..1))
   end
 end
